@@ -2,7 +2,7 @@ import { PopoverDetails } from "./popoverDetails";
 
 const Result = ({ campaigns }) => {
   return (
-    <div className="grid grid-cols-2 mx-auto mt-4 w-[85%] border rounded-md">
+    <div className="grid grid-cols-1 md:grid-cols-2 mx-auto mt-4 w-[85%] border rounded-md">
       <h2 className="text-2xl font-semibold text-center text-gray-200 rounded-t-md col-span-full m-0 bg-orange-700 py-4">Resultado</h2>
       <div className="flex flex-col gap-2 p-4">
         {campaigns.map((campaign, index) => (

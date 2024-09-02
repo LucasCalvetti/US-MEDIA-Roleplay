@@ -58,7 +58,7 @@ const CreateCampaignForm = ({ setData, setCreateFlag }: CreateCampaignFormProps)
   return (
     <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 backdrop-blur-sm z-50">
       <div className="relative bg-gray-800 p-6 rounded-lg shadow-lg w-full max-w-lg mx-auto">
-        <Button className="absolute top-2 right-1/2 text-gray-300 hover:text-gray-800 text-3xl" onClick={() => setCreateFlag(false)}>
+        <Button className="absolute top-2 left-[45%] text-gray-300 hover:text-gray-800 text-3xl" onClick={() => setCreateFlag(false)}>
           &times;
         </Button>
         <h2 className="text-2xl font-bold text-center mt-10 mb-4">Crear Nueva Campaña</h2>

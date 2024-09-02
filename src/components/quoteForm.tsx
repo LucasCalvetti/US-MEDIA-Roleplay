@@ -28,7 +28,6 @@ const QuoteForm = ({ onSubmit, data, vendorArray }: QuoteFormProps) => {
 
   useEffect(() => {
     console.log(data);
-
     setFormData(data);
   }, [data]);
 
@@ -39,17 +38,16 @@ const QuoteForm = ({ onSubmit, data, vendorArray }: QuoteFormProps) => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-
     onSubmit(formData);
   };
 
   return (
-    <div className="w-[85%] mx-auto rounded-2xl bg-gray-900 grid grid-cols-2 hover:shadow-diffuse hover:shadow-gray-800 duration-500">
-      <div className="w-full flex items-center justify-center rounded-2xl bg-orange-900 bg-hero-gradient">
-        <img className="w-[60%] brightness rounded-full p-8 brightness-[0.9] shadow-orange-900 shadow-2xl" src="https://usmediaconsulting.com/wp-content/uploads/2023/02/logo-20-years.png" />
+    <div className="w-full md:w-[85%] mx-auto rounded-2xl bg-gray-900 grid grid-cols-1 md:grid-cols-2 hover:shadow-diffuse hover:shadow-gray-800 duration-500">
+      <div className="w-full flex items-center justify-center rounded-2xl bg-orange-900 bg-hero-gradient p-4 md:p-0">
+        <img className="w-[80%] md:w-[60%] brightness rounded-full p-4 md:p-8 brightness-[0.9] shadow-orange-900 shadow-2xl" src="https://usmediaconsulting.com/wp-content/uploads/2023/02/logo-20-years.png" alt="Logo US Media" />
       </div>
       <form className="p-4 space-y-4 w-full mx-auto flex flex-col items-center" onSubmit={handleSubmit}>
-        <h2 className="text-2xl mt-4 font-bold text-center">Cotizador</h2>
+        <h2 className="text-xl md:text-2xl mt-4 font-bold text-center">Cotizador</h2>
         <div className="w-full space-y-4 flex flex-col gap-4 p-4">
           <div>
             <label className="block text-sm font-medium">Vendedor</label>
@@ -76,7 +74,7 @@ const QuoteForm = ({ onSubmit, data, vendorArray }: QuoteFormProps) => {
             <SelectPublisher />
           </div>
 
-          <button type="submit" className="mx-auto w-1/2 bg-blue-500 hover:bg-blue-800 duration-300 hover:shadow-inner hover:shadow-blue-400 text-white py-2 rounded-md">
+          <button type="submit" className="mx-auto w-full md:w-1/2 bg-blue-500 hover:bg-blue-800 duration-300 hover:shadow-inner hover:shadow-blue-400 text-white py-2 rounded-md">
             Calcular Margen
           </button>
         </div>

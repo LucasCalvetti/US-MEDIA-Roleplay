@@ -46,9 +46,9 @@ export default function Home() {
   };
 
   return (
-    <div className="container mx-auto p-4">
+    <div className="container mx-auto">
       <Header />
-      <main className="flex flex-col items-center justify-center p-4">
+      <main className="flex flex-col items-center justify-center mb-10">
         <QuoteForm data={data} vendorArray={vendorArray} onSubmit={handleFormSubmit} />
         {campaigns.length > 0 && <Result campaigns={campaigns} />}
         <Button variant="link" onClick={() => setCreateFlag(!createFlag)} className="mt-8">
