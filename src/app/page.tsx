@@ -59,8 +59,3 @@ export default function Home() {
     </div>
   );
 }
-
-/* 
-Revisar la documentación
-Subir todo a vercel
-*/
